@@ -2,7 +2,7 @@ import { defineMessages } from "react-intl";
 
 export const labels = defineMessages({
   button_cancel: {
-    id: "labels.botton.cancel",
+    id: "labels.button.cancel",
     defaultMessage: "Cancel",
     description:
       "'Cancel' button on all those small confirmation modals (other one is 'Ok' or 'Yes')",
@@ -53,5 +53,28 @@ export const labels = defineMessages({
     id: "labels.account.language_tooltip",
     defaultMessage: "Change the language of the user-interface.",
     description: "Tooltip text of dropdown to change the UI language",
+  },
+  frame_editors_title_bar_save_label: {
+    id: "labels.frame-editors.title-bar.save_label",
+    defaultMessage:
+      "{type, select, is_public {Public} read_only {Readonly} other {Save}}",
+    description: "Frame editor's title bar 'Save' button",
+  },
+  project_settings_restart_project_confirm_explanation: {
+    id: "labels.project.settings.restart-project.confirm.explanation",
+    defaultMessage:
+      "Restarting the project server will terminate all processes in the project, update the project code, and start the project running again. Running <a>compute servers</a> are not affected. It takes a few seconds, and can fix some issues in case things are not working properly. You'll not lose any files, but you have to start your notebooks and worksheets again.",
+  },
+  project_settings_restart_project_confirm_ok: {
+    id: "labels.project.settings.restart-project.confirm.ok",
+    defaultMessage: "Yes, {task} project",
+  },
+  project_settings_stop_project_ok: {
+    id: "labels.project.settings.stop-project.ok",
+    defaultMessage: "Yes, stop project",
+  },
+  project_settings_stop_project_label: {
+    id: "labels.project.settings.stop-project.label",
+    defaultMessage: "Stop{short, select, true {} other { Project}}…",
   },
 });

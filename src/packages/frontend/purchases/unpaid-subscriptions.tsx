@@ -9,6 +9,7 @@ import { Alert, Button, Popconfirm, Spin, Tag } from "antd";
 import { plural } from "@cocalc/util/misc";
 import { Icon } from "@cocalc/frontend/components/icon";
 import { webapp_client } from "@cocalc/frontend/webapp-client";
+import { CancelText } from "../i18n/components";
 
 interface Props {
   style?: CSSProperties;
@@ -140,7 +141,7 @@ export default function UnpaidSubscriptions({
         }
         onConfirm={handleRenewSubscriptions}
         okText="Renew Subscriptions"
-        cancelText="Cancel"
+        cancelText={<CancelText />}
       >
         <Button type="primary" size={size} onClick={update}>
           <Icon name="credit-card" />

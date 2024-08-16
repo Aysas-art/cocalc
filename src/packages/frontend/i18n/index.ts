@@ -7,6 +7,7 @@ import {
 
 import { AccountState } from "@cocalc/frontend/account/types";
 import { redux } from "@cocalc/frontend/app-framework";
+import localeEN from "@cocalc/frontend/i18n/en.json";
 import {
   DEFAULT_LOCALE,
   Locale,
@@ -39,12 +40,13 @@ export function getLocale(
 export function loadLocaleData(locale: Locale): Promise<Messages> {
   return (() => {
     switch (locale) {
+      case "en":
+        // We do not lazy load english, because it is the default. This language is "baked into" the app.
+        return new Promise((done) => done(localeEN));
       case "de":
         return import("@cocalc/frontend/i18n/de_DE.json");
       case "zh":
         return import("@cocalc/frontend/i18n/zh_CN.json");
-      case "en":
-        return import("@cocalc/frontend/i18n/en.json");
       case "es":
         return import("@cocalc/frontend/i18n/es_ES.json");
       default:

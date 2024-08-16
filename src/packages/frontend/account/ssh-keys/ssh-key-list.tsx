@@ -5,14 +5,16 @@
 
 import { Button, Popconfirm, Typography } from "antd";
 import { Map } from "immutable";
+
 import { redux } from "@cocalc/frontend/app-framework";
 import {
+  Gap,
   HelpIcon,
   Icon,
   SettingBox,
-  Gap,
   TimeAgo,
 } from "@cocalc/frontend/components";
+import { CancelText } from "@cocalc/frontend/i18n/components";
 import { cmp } from "@cocalc/util/misc";
 
 interface SSHKeyListProps {
@@ -169,7 +171,7 @@ function OneSSHKey({ ssh_key, project_id, mode = "project" }: OneSSHKeyProps) {
           }
           onConfirm={() => delete_key()}
           okText={"Yes, delete key"}
-          cancelText={"Cancel"}
+          cancelText={<CancelText />}
         >
           <Button
             size={isFlyout ? "small" : "middle"}
@@ -185,11 +187,7 @@ function OneSSHKey({ ssh_key, project_id, mode = "project" }: OneSSHKeyProps) {
         </Typography.Text>
         <br />
         Added on {new Date(ssh_key.get("creation_date")).toLocaleDateString()}
-        <div>
-          {" "}
-          {render_last_use()}
-          {" "}(NOTE: not all usage is tracked.)
-        </div>
+        <div> {render_last_use()} (NOTE: not all usage is tracked.)</div>
       </div>
     </div>
   );

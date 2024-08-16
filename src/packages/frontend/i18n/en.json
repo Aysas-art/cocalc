@@ -3,6 +3,8 @@
   "account.account_page.translation.info.label": "Translation Info...",
   "account.account_page.translation.info.title": "Translation Information",
   "account.account_preferences.title": "Account Preferences",
+  "account.account-button.confirm.ok": "Yes, sign out",
+  "account.account-button.confirm.title": "Sign out of your account?",
   "account.sign_out.body.sign_in": "Sign in to your account...",
   "account.sign_out.body.sign_out": "Sign out{everywhere, select, true { everywhere} other {}}...",
   "account.sign-out.button.title": "Are you sure you want to sign {account} out {everywhere, switch, true {on all web browsers? Every web browser will have to reauthenticate before using this account again.} other {on this web browser?} } {is_anonymous, switch, true {Everything you have done using this TEMPORARY ACCOUNT will be immediately deleted! If you would like to save your work to a new account, click cancel and sign up below.} other {} }",
@@ -14,7 +16,12 @@
   "labels.account.first_name": "First name",
   "labels.account.language_tooltip": "Change the language of the user-interface.",
   "labels.account.last_name": "Last name",
-  "labels.botton.cancel": "Cancel",
+  "labels.button.cancel": "Cancel",
   "labels.create_project": "Create Project...",
+  "labels.frame-editors.title-bar.save_label": "{type, select, is_public {Public} read_only {Readonly} other {Save}}",
+  "labels.project.settings.restart-project.confirm.explanation": "Restarting the project server will terminate all processes in the project, update the project code, and start the project running again. Running <a>compute servers</a> are not affected. It takes a few seconds, and can fix some issues in case things are not working properly. You'll not lose any files, but you have to start your notebooks and worksheets again.",
+  "labels.project.settings.restart-project.confirm.ok": "Yes, {task} project",
+  "labels.project.settings.stop-project.label": "Stop{short, select, true {} other { Project}}…",
+  "labels.project.settings.stop-project.ok": "Yes, stop project",
   "labels.projects": "Projects"
 }
